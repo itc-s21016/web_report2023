@@ -34,6 +34,11 @@ Route.post('/login', 'AuthController.login')
 Route.get('/logout', 'AuthController.logout')
   .as('auth.logout')
 
+Route.get('/absences', 'AbsencesController.index')
+  .as('absences.index.show')
+Route.get('/absences/add', 'AbsencesController.add')
+Route.post('/absences/add', 'AbsencesController.add_posted')
+
 Route.get('/cerfiticate', 'CerfiticateApplicationsController.index')
   .as('cerfiticate.index,show')
 Route.get('/cerfiticate/add', 'CerfiticateApplicationsController.add')
