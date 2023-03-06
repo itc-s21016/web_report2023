@@ -2,6 +2,7 @@
 @set('title', title)
 
 @section('body')
+@if (session.get('code'))
 
 <a href="{{ route('absences.index.show') }}"
    class="btn btn-outline-primary">欠席届</a>
